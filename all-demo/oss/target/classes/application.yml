@@ -1,0 +1,8 @@
+server:
+  port: 8088
+minio:
+  endpoint: http://minio.banyuan.club
+  bucketName: dev
+  accessKey: banyuan
+  secretKey: minio@banyuan
+

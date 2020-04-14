@@ -1,0 +1,17 @@
+POST http://localhost:8088/file/image/delete?objectName=1234
+###
+POST http://localhost:8088/file/image/upload
+Content-Type: multipart/form-data; boundary=boundary
+Authorization: Bearer {{auth_token}}
+
+
+--boundary
+Content-Disposition: form-data; name="file"; filename="a.jpg"
+
+< ./a.jpg
+
+client> {% client.global.set("file_path", response.body.substr("http://minio.banyuan.club/dev/".length,response.body.length));
+console.log(client.global.get("file_path"));
+%}
+
+###
