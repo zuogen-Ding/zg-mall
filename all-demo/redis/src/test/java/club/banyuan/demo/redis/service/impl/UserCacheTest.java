@@ -1,4 +1,4 @@
-package impl;
+package club.banyuan.demo.redis.service.impl;
 
 import org.junit.Assert;
 import org.junit.Before;

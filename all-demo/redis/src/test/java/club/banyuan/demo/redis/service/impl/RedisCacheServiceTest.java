@@ -1,4 +1,4 @@
-package impl;
+package club.banyuan.demo.redis.service.impl;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
