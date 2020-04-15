@@ -1,6 +1,7 @@
-package config;
+package club.banyuan.demo.redis.config;
 
 
+import club.banyuan.demo.redis.user.JacksonUser;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -17,7 +18,7 @@ import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
 import org.springframework.data.redis.serializer.RedisSerializationContext;
 import org.springframework.data.redis.serializer.RedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
-import user.JacksonUser;
+
 
 import java.time.Duration;
 

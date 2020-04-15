@@ -1,10 +1,10 @@
-package service.impl;
+package club.banyuan.demo.redis.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
-import service.CacheService;
+import club.banyuan.demo.redis.service.CacheService;
 
 import java.util.concurrent.TimeUnit;
 

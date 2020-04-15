@@ -1,4 +1,4 @@
-package user;
+package club.banyuan.demo.redis.user;
 
 import org.springframework.cache.annotation.Cacheable;
 
@@ -63,4 +63,3 @@ public class JacksonUser implements Serializable {
         this.password = password;
     }
 }
-

@@ -1,5 +1,6 @@
 package club.banyuan.demo.redis.service.impl;
 
+import club.banyuan.demo.redis.user.JacksonUser;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -8,9 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
-import service.impl.RedisCacheServiceImpl;
-import service.impl.UserServiceImpl;
-import user.JacksonUser;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -30,8 +28,8 @@ public class UserCacheTest {
     @Test
     public void cacheUser(){
         JacksonUser jacksonUser = new JacksonUser("admin","123456");
-        redisCacheService.set("user", jacksonUser);
-        JacksonUser user =  redisCacheService.get("user");
+        redisCacheService.set("club/banyuan/demo/redis/user", jacksonUser);
+        JacksonUser user =  redisCacheService.get("club/banyuan/demo/redis/user");
         Assert.assertEquals(user,jacksonUser);
     }
 

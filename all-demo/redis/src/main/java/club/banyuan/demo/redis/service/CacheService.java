@@ -1,4 +1,4 @@
-package service;
+package club.banyuan.demo.redis.service;
 
 public interface CacheService {
 

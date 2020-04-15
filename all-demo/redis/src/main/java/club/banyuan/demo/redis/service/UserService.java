@@ -1,10 +1,10 @@
-package service;
+package club.banyuan.demo.redis.service;
 
+
+import club.banyuan.demo.redis.user.JacksonUser;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
-import user.JacksonUser;
-
 public interface UserService {
 
     @Cacheable(value = "user",key = "'name'")
