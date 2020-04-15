@@ -13,6 +13,7 @@ import java.util.Date;
 public class FileController {
     @Autowired
     private OssFileService ossFileService;
+
     @RequestMapping(value = "/image/upload",method = RequestMethod.POST)
     @ResponseBody
     public String upload(@RequestParam("file")MultipartFile file){
@@ -31,7 +32,7 @@ public class FileController {
 
     @RequestMapping(value = "/image/delete",method = RequestMethod.POST)
     @ResponseBody
-    public String upload(@RequestParam("objectName")String objectName){
+    public String delete(@RequestParam("objectName")String objectName){
         try {
             return ossFileService.delete(objectName);
 

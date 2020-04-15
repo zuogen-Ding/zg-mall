@@ -11,6 +11,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>oss</module>
+        <module>redis</module>
     </modules>
     <artifactId>all-demo</artifactId>
 

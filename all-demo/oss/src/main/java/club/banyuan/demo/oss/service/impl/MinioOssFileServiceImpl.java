@@ -1,7 +1,10 @@
 package club.banyuan.demo.oss.service.impl;
 
 import club.banyuan.demo.oss.service.OssFileService;
+import io.minio.ErrorCode;
 import io.minio.MinioClient;
+import io.minio.ObjectStat;
+import io.minio.errors.ErrorResponseException;
 import io.minio.policy.PolicyType;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -21,14 +24,14 @@ public class MinioOssFileServiceImpl implements OssFileService {
     private String SECRET_KEY;
 
     @Override
-    public String save(String objectName, InputStream stream, String contentType) throws IOException {
+    public String save(String objectName, InputStream stream) throws IOException {
         try {
             MinioClient minioClient = new MinioClient(ENDPOINT, ACCESS_KEY, SECRET_KEY);
             if (!minioClient.bucketExists(BUCKET_NAME)) {
                 minioClient.makeBucket(BUCKET_NAME);
                 minioClient.setBucketPolicy(BUCKET_NAME, "*.*", PolicyType.READ_WRITE);
             }
-                minioClient.putObject(BUCKET_NAME, objectName, stream, contentType);
+                minioClient.putObject(BUCKET_NAME, objectName, stream, null);
                 return ENDPOINT + "/" + BUCKET_NAME + "/" + objectName;
 
 
@@ -40,17 +43,29 @@ public class MinioOssFileServiceImpl implements OssFileService {
     }
 
     @Override
-    public String delete(String objectName) throws IOException {
+    public void delete(String objectName) throws IOException {
         try {
             MinioClient minioClient = new MinioClient(ENDPOINT, ACCESS_KEY, SECRET_KEY);
-            if (!minioClient.bucketExists(BUCKET_NAME)) {
-                return "文件不存在";
-            }
             minioClient.removeObject(BUCKET_NAME, objectName);
-            return "success";
-
-
         } catch (Exception e) {
+            e.printStackTrace();
+            throw new IOException(e);
+        }
+    }
+
+    @Override
+    public boolean isExist(String objectName) throws IOException {
+        try {
+            MinioClient minioClient = new MinioClient(ENDPOINT, ACCESS_KEY, SECRET_KEY);
+            minioClient.statObject(BUCKET_NAME, objectName);
+            return true;
+        }catch (ErrorResponseException e){
+            if(ErrorCode.NO_SUCH_KEY == e.errorResponse().errorCode()){
+                return false;
+            }else {
+                throw new IOException(e);
+            }
+        }catch (Exception e){
             e.printStackTrace();
             throw new IOException(e);
         }
