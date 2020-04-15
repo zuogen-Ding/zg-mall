@@ -11,10 +11,10 @@ import service.impl.RedisCacheServiceImpl;
 @SpringBootTest
 public class RedisCacheServiceTest{
     @Autowired
-    private RedisCacheServiceImpl cacheService;
+    private RedisCacheServiceImpl redisCacheService;
 
     @Test
     public void getSetTest(){
-        cacheService.set("key","value");
+        redisCacheService.set("key","value");
     }
 }
