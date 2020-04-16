@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/all-demo/all-demo.iml" filepath="$PROJECT_DIR$/all-demo/all-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/all-demo/authentication/authentication.iml" filepath="$PROJECT_DIR$/all-demo/authentication/authentication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/all-demo/jwt/jwt.iml" filepath="$PROJECT_DIR$/all-demo/jwt/jwt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/all-demo/oss/oss.iml" filepath="$PROJECT_DIR$/all-demo/oss/oss.iml" />
+      <module fileurl="file://$PROJECT_DIR$/all-demo/redis/redies.iml" filepath="$PROJECT_DIR$/all-demo/redis/redies.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zg-mall.iml" filepath="$PROJECT_DIR$/zg-mall.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,2 +1,10 @@
 server:
   port: 8088
+
+spring:
+  redis:
+    host: localhost
+    database: 0
+    port: 6379
+    password:
+    timeout: 300
