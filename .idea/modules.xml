@@ -4,10 +4,12 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/all-demo/all-demo.iml" filepath="$PROJECT_DIR$/all-demo/all-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/all-demo/authentication/authentication.iml" filepath="$PROJECT_DIR$/all-demo/authentication/authentication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/all-demo/authorization/authorization.iml" filepath="$PROJECT_DIR$/all-demo/authorization/authorization.iml" />
       <module fileurl="file://$PROJECT_DIR$/all-demo/jwt/jwt.iml" filepath="$PROJECT_DIR$/all-demo/jwt/jwt.iml" />
       <module fileurl="file://$PROJECT_DIR$/all-demo/oss/oss.iml" filepath="$PROJECT_DIR$/all-demo/oss/oss.iml" />
       <module fileurl="file://$PROJECT_DIR$/all-demo/redis/redies.iml" filepath="$PROJECT_DIR$/all-demo/redis/redies.iml" />
       <module fileurl="file://$PROJECT_DIR$/zg-mall.iml" filepath="$PROJECT_DIR$/zg-mall.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zgmall-mgt/zgmallmgt.iml" filepath="$PROJECT_DIR$/zgmall-mgt/zgmallmgt.iml" />
     </modules>
   </component>
 </project>

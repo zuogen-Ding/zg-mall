@@ -1,10 +1,12 @@
-package club.banyuan.demo.jwt.service.Impl;
-import club.banyuan.demo.jwt.service.TokenService;
+package club.banyuan.demo.authorization.service.impl;
+
+import club.banyuan.demo.authorization.service.TokenService;
 import io.jsonwebtoken.*;
-import java.util.Date;
-import java.util.Map;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+
+import java.util.Date;
+import java.util.Map;
 
 @Service
 public class TokenServiceImpl implements TokenService {
@@ -14,7 +16,6 @@ public class TokenServiceImpl implements TokenService {
 
     @Value("${token.expireSec}")
     private long EXPIRE_SEC;
-
 
     @Override
     public String generateToken(String subject) {
@@ -70,9 +71,8 @@ public class TokenServiceImpl implements TokenService {
 
     // TODO
     @Override
-    public Map<String, Object> parseMap(String token)
-    {
-        return getBody(token);
+    public Map<String, Object> parseMap(String token) {
+        return null;
     }
 
     private Claims getBody(String token) {
@@ -85,6 +85,4 @@ public class TokenServiceImpl implements TokenService {
             throw new IllegalArgumentException(e);
         }
     }
-
-
 }

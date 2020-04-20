@@ -7,18 +7,22 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="jwt" />
-        <module name="authentication" />
-        <module name="oss" />
         <module name="redies" />
+        <module name="authentication" />
+        <module name="zgmallmgt" />
+        <module name="oss" />
+        <module name="authorization" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="all-demo" target="1.8" />
       <module name="authentication" target="1.8" />
+      <module name="authorization" target="1.8" />
       <module name="jwt" target="1.8" />
       <module name="oss" target="1.8" />
       <module name="redies" target="1.8" />
       <module name="zg-mall" target="1.8" />
+      <module name="zgmallmgt" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
